@@ -17,11 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Lets go button will start the quiz
     public void startQuiz(View view) {
         Intent intent = new Intent(this, startquiz.class);
         startActivity(intent);
     }
 
+    //Button tips, a layout with instructions will appear
+    //When pressed for the second time, the layout will disappear
     public void showTips(View view) {
         if (clicks == 1) {
             LinearLayout showTip = (LinearLayout) findViewById(R.id.instructions);
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //If the user click on the layout with instructions it will disappear
     public void closeTips(View view) {
         LinearLayout showTip = (LinearLayout) findViewById(R.id.instructions);
         showTip.setVisibility(View.GONE);
