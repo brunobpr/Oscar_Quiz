@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redcarpet"
+    android:padding="16dp"
+    tools:context="app.getitright.com.example.android.getitright.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Oscar Quiz"
+            android:textAllCaps="true"
+            android:textColor="#FFC107"
+            android:textSize="56sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/logooscar" />
+
+        <LinearLayout
+            android:id="@+id/instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_border"
+            android:clickable="true"
+            android:onClick="closeTips"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:text="The quiz consists of 3 levels:"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="6dp"
+                android:text="Level One: 4 questions and MORE THAN ONE answer is possible in each question."
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="6dp"
+                android:text="Level two: 4 questions and ONLY ONE answer is possible."
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="6dp"
+                android:text="Level Three: You MUST TYPE the correct answer."
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="showTips"
+                android:text="Tips"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startQuiz"
+                android:text="Let's go"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_startquiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+
+    tools:context="app.getitright.com.example.android.getitright.startquiz">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_questions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Level"
+                        android:textColor="#B59130"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/phase_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1"
+                        android:textColor="#B59130"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/logooscar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Question"
+                        android:textColor="#B59130"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/question_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#B59130"
+                        android:textSize="26sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/question_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:background="@drawable/background_border"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Which three films have the most Academy Award nominations?"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/logoname" />
+
+            <LinearLayout
+                android:id="@+id/layout_check_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/answer_number_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_border"
+                    android:text="Titanic"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/answer_number_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_border"
+                    android:text="The Life Is Beautiful"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/answer_number_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_border"
+                    android:text="La La Land"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/answer_number_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_border"
+                    android:text="All About Eve"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_radio_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp">
+
+                    <RadioButton
+                        android:id="@+id/answer_number_one2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_border"
+                        android:text="Titanic"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/answer_number_two2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_border"
+                        android:text="The Life Is Beautiful"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/answer_number_three2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_border"
+                        android:text="La La Land"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/answer_number_four2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_border"
+                        android:text="All About Eve"
+                        android:textColor="@android:color/black" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_editable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/answer_editable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_border"
+                    android:hint="Answer"
+                    android:inputType="textCapSentences"
+                    android:padding="16dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="26dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="skipQuestion"
+                    android:text="Skip"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="checkAnswer"
+                    android:text="Submit"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="26dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Your score is:"
+                android:textColor="#B59130"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_border"
+                android:padding="16dp"
+                android:text="0"
+                android:textColor="#B59130"
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#B59130"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/logooscar" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="restart"
+                android:text="Restart" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
