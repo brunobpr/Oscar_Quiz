@@ -308,7 +308,6 @@ public class startquiz extends AppCompatActivity {
             }
         }
     }
-
     //Restart button will start activity_main
     public void restart(View view) {
         Intent intent = new Intent(this, MainActivity.class);
