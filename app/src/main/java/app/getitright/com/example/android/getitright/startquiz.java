@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +19,9 @@ public class startquiz extends AppCompatActivity {
     // Variables
     int finalScore = 0;
     int questionNumber = 1;
-    LinearLayout lltRadio, lltCheck, lltEdt, lltQuest, lltScore;
+    String correctAnswer = "";
+    LinearLayout lltRadio, lltCheck, lltEdt, lltQuest;
+    ScrollView lltScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,7 @@ public class startquiz extends AppCompatActivity {
         lltCheck = (LinearLayout) findViewById(R.id.layout_check_buttons);
         lltEdt = (LinearLayout) findViewById(R.id.layout_editable_text);
         lltQuest = (LinearLayout) findViewById(R.id.layout_questions);
-        lltScore = (LinearLayout) findViewById(R.id.layout_score);
+        lltScore = (ScrollView) findViewById(R.id.layout_score);
         //Toast to show the Level
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
@@ -60,7 +63,7 @@ public class startquiz extends AppCompatActivity {
         Editable answerEditableText = answerEditable.getText();
         // From question Number 1 to 10, check if each one of them is correct
         //If they are correct, the score is implemented by one
-        //If they are NOT correct, a toats saying 'Wrong' is shown.
+        //If they are NOT correct, a toats saying 'Wrong' is shown and a string is implemented to be shown later
         if (questionNumber == 1) {
             if (answerNumberOne && answerNumberThree && answerNumberFour) {
                 finalScore = finalScore + 1;
@@ -68,6 +71,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "1) Titanic, La La Land and All About Eve have 14 Oscar nominations.";
             }
         }
         if (questionNumber == 2) {
@@ -77,6 +81,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "2) Both Denis Villeneuve (Arrival) and Mel Gibson (Hacksaw Ridge) were nominated in the 89th Academy Awards";
             }
         }
         if (questionNumber == 3) {
@@ -86,6 +91,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "3) Both Spencer Tracy(1960 and 1961) and Tom Hanks(1993 and 1994)";
             }
         }
         //This is the last question of the first level
@@ -96,6 +102,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "4) Meryl Streep won the Academy Awards for Sophie's Choice, The Iron Lady and Kramer vs. Kramer";
             }
             lltCheck.setVisibility(View.GONE);
             lltEdt.setVisibility(View.GONE);
@@ -109,6 +116,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "5) Frank Borzage won the first Oscar for Seventh Heaven in 1929";
             }
         }
         if (questionNumber == 6) {
@@ -118,6 +126,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "6) Titanic, Ben-Hur and The Lord of the Rings: The Return of the King all have won an Academy Awards high 11 Oscars";
             }
         }
         if (questionNumber == 7) {
@@ -127,6 +136,7 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "7) Bob Hope hosted the Academy Awards a record 19 times";
             }
         }
         //This is the last question of the second level
@@ -137,26 +147,29 @@ public class startquiz extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "8) Hattie McDaniel won Best Supporting Actress in Gone With the Wind";
             }
         }
         if (questionNumber == 9) {
-            String correctAnswer = "Moonlight ";
-            if (answerEditableText.toString().equals(correctAnswer)) {
+            String correctAnswerEdt = "Moonlight ";
+            if (answerEditableText.toString().equals(correctAnswerEdt)) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "9) Moonlight won the 89th Oscar Award for Best Picture";
             }
         }
         if (questionNumber == 10) {
-            String correctAnswer = "The Godfather ";
-            if (answerEditableText.toString().equals(correctAnswer)) {
+            String correctAnswerEdt = "The Godfather ";
+            if (answerEditableText.toString().equals(correctAnswerEdt)) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast.makeText(context, "Wrong", duration).show();
+                correctAnswer = correctAnswer + "\n" + "10) The Godfather is the only film series to win more than one Best Picture award";
             }
         }
         //Method to change the question
@@ -308,10 +321,18 @@ public class startquiz extends AppCompatActivity {
             }
         }
     }
+
     //Restart button will start activity_main
     public void restart(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    //Answer Button set new text to the textview and make it visible
+    public void showCorrectAnswer(View view) {
+        TextView showAnswers = (TextView) findViewById(R.id.show_answer);
+        showAnswers.setVisibility(View.VISIBLE);
+        showAnswers.setText(correctAnswer);
     }
 }
 
