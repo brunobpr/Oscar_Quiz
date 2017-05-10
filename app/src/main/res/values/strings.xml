@@ -1,3 +1,75 @@
 <resources>
     <string name="app_name">GetItRight</string>
+    <string name="level">Level</string>
+    <string name="question">Question</string>
+    <string name="question1">Which three films have the most Academy Award nominations?</string>
+    <string name="Answer1A">Titanic</string>
+    <string name="Answer1B">The Life Is Beautiful</string>
+    <string name="Answer1C">La La Land</string>
+    <string name="Answer1D">All About Eve</string>
+    <string name="skip_button">Skip</string>
+    <string name="submit_button">Submit</string>
+    <string name="score_message">Your score is:</string>
+    <string name="answer_button">Answers</string>
+    <string name="restart_button">Restart</string>
+    <string name="question2">Which of these directors were nominated as The Best Director in the 89th Academy Awards(2017)</string>
+    <string name="Answer2A" translatable="false">Denis Villeneuve</string>
+    <string name="Answer2B" translatable="false">Steven Spielberg</string>
+    <string name="Answer2C" translatable="false">Mel Gibson</string>
+    <string name="Answer2D" translatable="false">Robson Chazelle</string>
+    <string name="question3">Who has won two consecutive awards?</string>
+    <string name="Answer3A" translatable="false">Daniel Day-Lewis</string>
+    <string name="Answer3B" translatable="false">Spencer Tracy</string>
+    <string name="Answer3C" translatable="false">Jack Nicholson</string>
+    <string name="Answer3D" translatable="false">Tom Hanks</string>
+    <string name="question4">For which films has Meryl Streep won The Academy Awards?</string>
+    <string name="Answer4A">Sophie\'s Choice</string>
+    <string name="Answer4B">The Iron Lady</string>
+    <string name="Answer4C">It\'s Complicated</string>
+    <string name="Answer4D">Kramer vs. Kramer</string>
+    <string name="level_2_toast">Level 2</string>
+    <string name="question5">Who won the First Academy Award for Best Director?</string>
+    <string name="Answer5A" translatable="false">Clarence Brown</string>
+    <string name="Answer5B" translatable="false">Frank Borzage</string>
+    <string name="Answer5C" translatable="false">King Vidor</string>
+    <string name="Answer5D" translatable="false">Alfred Hitchcock</string>
+    <string name="question6">Which of these films did not win a record 11 Oscars?</string>
+    <string name="Answer6A">Titanic</string>
+    <string name="Answer6B">Ben-Hur</string>
+    <string name="Answer6C">Lord of the Rings: The Return of the King</string>
+    <string name="Answer6D">West Side Story</string>
+    <string name="question7">Who has hosted the most Academy Awards?</string>
+    <string name="Answer7A" translatable="false">Bob Hope</string>
+    <string name="Answer7B" translatable="false">Billy Crystal</string>
+    <string name="Answer7C" translatable="false">Whoopi Goldberg</string>
+    <string name="Answer7D" translatable="false">Johnny Carson</string>
+    <string name="question8">Who was the first African American to win an Academy Award?</string>
+    <string name="Answer8A" translatable="false">James Baskett</string>
+    <string name="Answer8B" translatable="false">Dorothy Dandridge</string>
+    <string name="Answer8C" translatable="false">Hattie McDaniel</string>
+    <string name="Answer8D" translatable="false">Sidney Poitier</string>
+    <string name="level_3_toast">Level 3</string>
+    <string name="question9">Which film won the 89th Academy Awards(2017)for Best Picture?</string>
+    <string name="question10">Which film series has won more than one Academy Award for Best Picture?</string>
+    <string name="less3_message">You need to practise more!</string>
+    <string name="more3_message">You really know about The Academy Awards!</string>
+    <string name="more7_message">Congratulations, you are an expert!</string>
+    <string name="all_message">WOW! You\'ve just mastered it!</string>
+    <string name="correctAnswer1">1) Titanic, La La Land and All About Eve have 14 Oscar nominations.</string>
+    <string name="correctAnswer2">2) Both Denis Villeneuve (Arrival) and Mel Gibson (Hacksaw Ridge) were nominated in the 89th Academy Awards</string>
+    <string name="correctAnswer3">3) Both Spencer Tracy(1960 and 1961) and Tom Hanks(1993 and 1994)</string>
+    <string name="correctAnswer4">4) Meryl Streep won the Academy Awards for Sophie\'s Choice, The Iron Lady and Kramer vs. Kramer</string>
+    <string name="correctAnswer5">5) Frank Borzage won the first Oscar for Seventh Heaven in 1929</string>
+    <string name="correctAnswer6">6) Titanic, Ben-Hur and The Lord of the Rings: The Return of the King all have won an Academy Awards high 11 Oscars</string>
+    <string name="correctAnswer7">7) Bob Hope hosted the Academy Awards a record 19 times</string>
+    <string name="correctAnswer8">8) Hattie McDaniel won Best Supporting Actress in Gone With the Wind</string>
+    <string name="correctAnswer9">9) Moonlight won the 89th Oscar Award for Best Picture</string>
+    <string name="correctAnswer10">10) The Godfather is the only film series to win more than one Best Picture award</string>
+    <string name="wrong_toast">Wrong</string>
+    <string name="tips">Tips</string>
+    <string name="start">Let\'s go</string>
+    <string name="level1_tip">Level One: 4 questions and MORE THAN ONE answer is possible in each question.</string>
+    <string name="level2_tip">Level two: 4 questions and ONLY ONE answer is possible.</string>
+    <string name="level3_tip">Level Three: You MUST TYPE the correct answer.</string>
+    <string name="tips_title">The quiz consists of 3 levels:</string>
 </resources>

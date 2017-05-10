@@ -65,44 +65,44 @@ public class startquiz extends AppCompatActivity {
         //If they are correct, the score is implemented by one
         //If they are NOT correct, a toats saying 'Wrong' is shown and a string is implemented to be shown later
         if (questionNumber == 1) {
-            if (answerNumberOne && answerNumberThree && answerNumberFour) {
+            if (answerNumberOne && answerNumberThree && answerNumberFour && !answerNumberTwo) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "1) Titanic, La La Land and All About Eve have 14 Oscar nominations.";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer1);
             }
         }
         if (questionNumber == 2) {
-            if (answerNumberOne && answerNumberThree) {
+            if (answerNumberOne && answerNumberThree && !answerNumberFour && !answerNumberTwo) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "2) Both Denis Villeneuve (Arrival) and Mel Gibson (Hacksaw Ridge) were nominated in the 89th Academy Awards";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer2);
             }
         }
         if (questionNumber == 3) {
-            if (answerNumberTwo && answerNumberFour) {
+            if (answerNumberTwo && answerNumberFour && !answerNumberOne && !answerNumberThree) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "3) Both Spencer Tracy(1960 and 1961) and Tom Hanks(1993 and 1994)";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer3);
             }
         }
         //This is the last question of the first level
         if (questionNumber == 4) {
-            if (answerNumberOne && answerNumberTwo && answerNumberFour) {
+            if (answerNumberOne && answerNumberTwo && answerNumberFour && !answerNumberThree) {
                 finalScore = finalScore + 1;
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "4) Meryl Streep won the Academy Awards for Sophie's Choice, The Iron Lady and Kramer vs. Kramer";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer4);
             }
             lltCheck.setVisibility(View.GONE);
             lltEdt.setVisibility(View.GONE);
@@ -115,8 +115,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "5) Frank Borzage won the first Oscar for Seventh Heaven in 1929";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer5);
             }
         }
         if (questionNumber == 6) {
@@ -125,8 +125,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "6) Titanic, Ben-Hur and The Lord of the Rings: The Return of the King all have won an Academy Awards high 11 Oscars";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer6);
             }
         }
         if (questionNumber == 7) {
@@ -135,8 +135,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "7) Bob Hope hosted the Academy Awards a record 19 times";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer7);
             }
         }
         //This is the last question of the second level
@@ -146,8 +146,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "8) Hattie McDaniel won Best Supporting Actress in Gone With the Wind";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer8);
             }
         }
         if (questionNumber == 9) {
@@ -157,8 +157,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "9) Moonlight won the 89th Oscar Award for Best Picture";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer9);
             }
         }
         if (questionNumber == 10) {
@@ -168,8 +168,8 @@ public class startquiz extends AppCompatActivity {
             } else {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
-                Toast.makeText(context, "Wrong", duration).show();
-                correctAnswer = correctAnswer + "\n" + "10) The Godfather is the only film series to win more than one Best Picture award";
+                Toast.makeText(context, R.string.wrong_toast, duration).show();
+                correctAnswer = correctAnswer + "\n" + getString(R.string.correctAnswer10);
             }
         }
         //Method to change the question
@@ -227,77 +227,77 @@ public class startquiz extends AppCompatActivity {
         //The text from the question and answers will change
         //According to its number
         if (questionNumber == 2) {
-            questionText.setText("Which of these directors were nominated as The Best Director in the 89th Academy Awards(2017)");
-            firstAnswer.setText("Denis Villeneuve");
-            secondAnswer.setText("Steven Spielberg");
-            thirdAnswer.setText("Mel Gibson");
-            forthAnswer.setText("Robson Chazelle");
+            questionText.setText(R.string.question2);
+            firstAnswer.setText(R.string.Answer2A);
+            secondAnswer.setText(R.string.Answer2B);
+            thirdAnswer.setText(R.string.Answer2C);
+            forthAnswer.setText(R.string.Answer2D);
             questionNumberText.setText("2");
         }
         if (questionNumber == 3) {
-            questionText.setText("Who has won two consecutive awards?");
-            firstAnswer.setText("Daniel Day-Lewis");
-            secondAnswer.setText("Spencer Tracy");
-            thirdAnswer.setText("Jack Nicholson");
-            forthAnswer.setText("Tom Hanks");
+            questionText.setText(R.string.question3);
+            firstAnswer.setText(R.string.Answer3A);
+            secondAnswer.setText(R.string.Answer3B);
+            thirdAnswer.setText(R.string.Answer3C);
+            forthAnswer.setText(R.string.Answer3D);
             questionNumberText.setText("3");
         }
         if (questionNumber == 4) {
-            questionText.setText("For which films has Meryl Streep won The Academy Awards?");
-            firstAnswer.setText("Sophie's Choice");
-            secondAnswer.setText("The Iron Lady");
-            thirdAnswer.setText("It's Complicated");
-            forthAnswer.setText("Kramer vs. Kramer");
+            questionText.setText(R.string.question4);
+            firstAnswer.setText(R.string.Answer4A);
+            secondAnswer.setText(R.string.Answer4B);
+            thirdAnswer.setText(R.string.Answer4C);
+            forthAnswer.setText(R.string.Answer4D);
             questionNumberText.setText("4");
         }
         //Beginning of the second level, a toast saying 'Second Level' will appear
         if (questionNumber == 5) {
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
-            Toast.makeText(context, "Level 2", duration).show();
-            questionText.setText("Who won the First Academy Award for Best Director?");
-            firstAnswer2.setText("Clarence Brown");
-            secondAnswer2.setText("Frank Borzage");
-            thirdAnswer2.setText("King Vidor");
-            forthAnswer2.setText("Alfred Hitchcock");
+            Toast.makeText(context, R.string.level_2_toast, duration).show();
+            questionText.setText(R.string.question5);
+            firstAnswer2.setText(R.string.Answer5A);
+            secondAnswer2.setText(R.string.Answer5B);
+            thirdAnswer2.setText(R.string.Answer5C);
+            forthAnswer2.setText(R.string.Answer5D);
             questionNumberText.setText("1");
             phaseNumberText.setText("2");
         }
         if (questionNumber == 6) {
-            questionText.setText("Which of these films did not win a record 11 Oscars?");
-            firstAnswer2.setText("Titanic");
-            secondAnswer2.setText("Ben-Hur");
-            thirdAnswer2.setText("Lord of the Rings: The Return of the King");
-            forthAnswer2.setText("West Side Story");
+            questionText.setText(R.string.question6);
+            firstAnswer2.setText(R.string.Answer6A);
+            secondAnswer2.setText(R.string.Answer6B);
+            thirdAnswer2.setText(R.string.Answer6C);
+            forthAnswer2.setText(R.string.Answer6D);
             questionNumberText.setText("2");
         }
         if (questionNumber == 7) {
-            questionText.setText("Who has hosted the most Academy Awards?");
-            firstAnswer2.setText("Bob Hope");
-            secondAnswer2.setText("Billy Crystal");
-            thirdAnswer2.setText("Whoopi Goldberg");
-            forthAnswer2.setText("Johnny Carson");
+            questionText.setText(R.string.question7);
+            firstAnswer2.setText(R.string.Answer7A);
+            secondAnswer2.setText(R.string.Answer7B);
+            thirdAnswer2.setText(R.string.Answer7C);
+            forthAnswer2.setText(R.string.Answer7D);
             questionNumberText.setText("3");
         }
         if (questionNumber == 8) {
-            questionText.setText("Who was the first African American to win an Academy Award?");
-            firstAnswer2.setText("James Baskett");
-            secondAnswer2.setText("Dorothy Dandridge");
-            thirdAnswer2.setText(" Hattie McDaniel");
-            forthAnswer2.setText("Sidney Poitier");
+            questionText.setText(R.string.question8);
+            firstAnswer2.setText(R.string.Answer8A);
+            secondAnswer2.setText(R.string.Answer8B);
+            thirdAnswer2.setText(R.string.Answer8C);
+            forthAnswer2.setText(R.string.Answer8D);
             questionNumberText.setText("4");
         }
         //Beginning of the third level, a toast saying 'Third Level' will appear
         if (questionNumber == 9) {
             Context context = getApplicationContext();
             int duration = Toast.LENGTH_SHORT;
-            Toast.makeText(context, "Level 3", duration).show();
-            questionText.setText("Which film won the 89th Academy Awards(2017)for Best Picture?");
+            Toast.makeText(context, R.string.level_3_toast, duration).show();
+            questionText.setText(R.string.question9);
             questionNumberText.setText("1");
             phaseNumberText.setText("3");
         }
         if (questionNumber == 10) {
-            questionText.setText("Which film series has won more than one Academy Award for Best Picture?");
+            questionText.setText(R.string.question10);
             questionNumberText.setText("2");
         }
         //Quiz ends, the layout with the score will replace the current one
@@ -308,16 +308,16 @@ public class startquiz extends AppCompatActivity {
             TextView resultShow = (TextView) findViewById(R.id.result);
             scoreShow.setText("" + finalScore + "");
             if (finalScore < 3) {
-                resultShow.setText("You need to practise more!");
+                resultShow.setText(R.string.less3_message);
             }
             if (finalScore >= 3 && finalScore < 7) {
-                resultShow.setText("You really know about The Academy Awards!");
+                resultShow.setText(R.string.more3_message);
             }
             if (finalScore >= 7 && finalScore <= 9) {
-                resultShow.setText("Congratulations, you are an expert!");
+                resultShow.setText(R.string.more7_message);
             }
             if (finalScore == 10) {
-                resultShow.setText("WOW! You've just mastered it!");
+                resultShow.setText(R.string.all_message);
             }
         }
     }

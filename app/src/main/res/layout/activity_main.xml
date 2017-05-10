@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <TextView
             android:layout_width="match_parent"
@@ -24,7 +25,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:src="@drawable/logooscar" />
 
@@ -45,7 +46,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:paddingTop="16dp"
-                android:text="The quiz consists of 3 levels:"
+                android:text="@string/tips_title"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
@@ -57,7 +58,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="6dp"
-                android:text="Level One: 4 questions and MORE THAN ONE answer is possible in each question."
+                android:text="@string/level1_tip"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -69,7 +70,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="6dp"
-                android:text="Level two: 4 questions and ONLY ONE answer is possible."
+                android:text="@string/level2_tip"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -82,7 +83,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="6dp"
-                android:text="Level Three: You MUST TYPE the correct answer."
+                android:text="@string/level3_tip"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -98,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="showTips"
-                android:text="Tips"
+                android:text="@string/tips"
                 android:textColor="@android:color/black" />
 
             <Button
@@ -106,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="startQuiz"
-                android:text="Let's go"
+                android:text="@string/start"
                 android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
